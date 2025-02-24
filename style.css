@@ -1,0 +1,98 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+.day {
+    background-color: #20232a;
+    font-size: 3rem;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.3);
+    animation: pulse 2s infinite, day-glow 1.5s ease-in-out infinite alternate;
+}
+
+.day div {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.clock {
+    margin: 0 10px;
+}
+
+.front-clock {
+    background-color: #20232a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.front-clock div {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+p {
+    font-size: 18px;
+    margin: 0;
+    text-transform: lowercase;
+    color: #aaa;
+}
+
+/* Animations */
+
+/* Glowing effect for the digits */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+    }
+    100% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff;
+    }
+}
+
+/* Pulse effect for the clock's container */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.3);
+    }
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.7), 0 0 50px rgba(0, 255, 255, 0.4);
+    }
+}
+
+/* Unique glow effect for the day text */
+@keyframes day-glow {
+    0% {
+        text-shadow: 0 0 5px #0ccaf0, 0 0 10px #0ccaf0, 0 0 15px #0ccaf0, 0 0 20px #0ccaf0;
+    }
+    100% {
+        text-shadow: 0 0 20px #0ccaf0, 0 0 25px #0ccaf0, 0 0 30px #0ccaf0, 0 0 35px #ff69b4;
+    }
+}
+
